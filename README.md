@@ -1,10 +1,14 @@
 # LaTeX-DATN
 
+[![LaTeX PDF and release](https://github.com/Ex6TenZ13/LaTeX-DATN/actions/workflows/latex.yml/badge.svg?branch=main)](https://github.com/Ex6TenZ13/LaTeX-DATN/actions/workflows/latex.yml)
+
 Mẫu báo cáo đồ án tốt nghiệp bằng LaTeX.
 
 [![Xem trang đầu của báo cáo](preview.png)](https://github.com/Ex6TenZ13/LaTeX-DATN/blob/main/Quyen_DATN.pdf)
 
 Bấm vào ảnh để mở PDF trong trình xem của GitHub. Các bản phát hành và tệp nguồn được lưu tại [GitHub Releases](https://github.com/Ex6TenZ13/LaTeX-DATN/releases/latest).
+
+ZIP mã nguồn của release không bao gồm `README.md`.
 
 ## Cài đặt trên Windows
 

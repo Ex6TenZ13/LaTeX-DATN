@@ -37,7 +37,8 @@ jobs:
             --format=zip \
             --prefix="LaTeX-DATN-${GITHUB_REF_NAME}/" \
             --output=dist/LaTeX-DATN-source.zip \
-            "$GITHUB_SHA"
+            "$GITHUB_SHA" \
+            ':(exclude)README.md'
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v7.0.2
