@@ -1,0 +1,769 @@
+% =================================================================
+% SPECIFIC REGULATIONS FOR FInal Design REPORT PREPARATION
+% USING LATEX
+% =================================================================
+
+\clearpage
+\thispagestyle{empty}
+
+\begin{center}
+    {\fontsize{16pt}{20pt}\selectfont\bfseries
+    SPECIFIC REGULATIONS FOR PREPARING\\
+    FINAL DESIGN REPORTS USING \LaTeX}
+\end{center}
+
+\vspace{0.5cm}
+
+{\fontsize{13pt}{17pt}\selectfont
+\setstretch{1.3}
+\justifying
+
+% ================================================================
+% I. REPORT STRUCTURE
+% ================================================================
+
+\noindent
+\textbf{I.\quad REPORT STRUCTURE}
+
+\vspace{0.15cm}
+
+The Final Design report shall be prepared using the official
+\LaTeX{} template provided by the Department. Students shall not modify
+the document structure, page layout, heading styles, numbering
+system, or other predefined formatting settings unless approved by
+the supervisor.
+
+The report shall be arranged in the following order:
+
+\begin{enumerate}[label=\arabic*., leftmargin=1.2cm, itemsep=2pt]
+    \item Outer cover page;
+    \item Inner cover page;
+    \item Final Design Assignment Form;
+    \item Supervisor's Evaluation Form;
+    \item Acknowledgements (if applicable);
+    \item Table of Contents;
+    \item List of Symbols and Abbreviations (if applicable);
+    \item List of Figures;
+    \item List of Tables;
+    \item Abstract;
+    \item Main chapters of the FInal Design;
+    \item Conclusions and Recommendations;
+    \item References;
+    \item Appendices (if applicable).
+\end{enumerate}
+
+The preliminary pages shall not be numbered as chapters. The main
+content shall be organized into consecutively numbered chapters,
+beginning with Chapter 1.
+
+\vspace{0.3cm}
+
+% ================================================================
+% II. CONTENT OF THE FInal Design
+% ================================================================
+
+\noindent
+\textbf{II.\quad CONTENT OF THE FInal Design}
+
+\vspace{0.15cm}
+
+\begin{itemize}[leftmargin=0.8cm, itemsep=3pt]
+
+    \item The report shall contain only information directly related
+    to the assigned project topic.
+
+    \item The content shall demonstrate the student's own work,
+    understanding, analysis, design, calculation, simulation,
+    implementation, and evaluation as appropriate to the project.
+
+    \item Information obtained from books, journal papers,
+    conference papers, standards, websites, technical documents,
+    or other sources must be properly cited.
+
+    \item Chapters, sections, and subsections shall be generated
+    automatically using the standard \LaTeX{} commands:
+
+\begin{verbatim}
+\chapter{...}
+\section{...}
+\subsection{...}
+\end{verbatim}
+
+    \item Chapter, section, and subsection numbers shall not be
+    manually entered.
+
+    \item The recommended hierarchy is Chapter -- Section --
+    Subsection. Excessive subdivision of the report should be avoided.
+
+    \item Unless otherwise specified by the Faculty or supervisor,
+    the main report should normally contain between 30 and 80 pages,
+    excluding large appendices.
+
+\end{itemize}
+
+\vspace{0.3cm}
+
+% ================================================================
+% III. PAGE LAYOUT AND TEXT FORMATTING
+% ================================================================
+
+\noindent
+\textbf{III.\quad PAGE LAYOUT AND TEXT FORMATTING}
+
+\vspace{0.15cm}
+
+The report shall be formatted on A4 paper and printed on one side
+of each sheet. The page margins shall be:
+
+\begin{center}
+\begin{tabular}{ll}
+    Left margin:   & 3.5 cm \\
+    Right margin:  & 2.0 cm \\
+    Top margin:    & 2.5 cm \\
+    Bottom margin: & 2.5 cm
+\end{tabular}
+\end{center}
+
+The main text shall use a font size of 13 pt with 1.3-line spacing.
+A Times New Roman or equivalent Times-family typeface shall be used.
+
+The text shall be fully justified. Students shall not use repeated
+spaces, manual line breaks, or repeated blank lines to position
+text.
+
+Page layout and general formatting shall be controlled by the
+official template. Students shall not manually alter margins, font
+sizes, line spacing, heading spacing, or paragraph formatting for
+individual pages.
+
+\vspace{0.3cm}
+
+% ================================================================
+% IV. CHAPTERS, SECTIONS, AND SUBSECTIONS
+% ================================================================
+
+\noindent
+\textbf{IV.\quad CHAPTERS, SECTIONS, AND SUBSECTIONS}
+
+\vspace{0.15cm}
+
+\begin{itemize}[leftmargin=0.8cm, itemsep=3pt]
+
+    \item Chapter titles shall be generated using:
+
+\begin{verbatim}
+\chapter{Chapter Title}
+\end{verbatim}
+
+    \item Section titles shall be generated using:
+
+\begin{verbatim}
+\section{Section Title}
+\end{verbatim}
+
+    \item Subsection titles shall be generated using:
+
+\begin{verbatim}
+\subsection{Subsection Title}
+\end{verbatim}
+
+    \item Numbers such as Chapter 1, 1.1, 1.1.1, etc.\ shall be
+    generated automatically by \LaTeX{}.
+
+    \item Students shall not manually reproduce heading styles using
+    commands such as \verb|\textbf|, \verb|\fontsize|,
+    or \verb|\centering| instead of the appropriate structural
+    command.
+
+\end{itemize}
+
+\vspace{0.3cm}
+
+% ================================================================
+% V. PAGE NUMBERING
+% ================================================================
+
+\noindent
+\textbf{V.\quad PAGE NUMBERING}
+
+\vspace{0.15cm}
+
+Cover pages and official forms at the beginning of the report shall
+not display page numbers.
+
+The main body of the report shall use Arabic page numbers beginning
+from Chapter 1.
+
+Page numbers shall be generated automatically by \LaTeX{}.
+Students shall not manually enter page numbers.
+
+\vspace{0.3cm}
+
+% ================================================================
+% VI. TABLE OF CONTENTS AND LISTS
+% ================================================================
+
+\noindent
+\textbf{VI.\quad TABLE OF CONTENTS AND LISTS}
+
+\vspace{0.15cm}
+
+The Table of Contents shall be generated automatically using:
+
+\begin{verbatim}
+\tableofcontents
+\end{verbatim}
+
+The List of Figures shall be generated using:
+
+\begin{verbatim}
+\listoffigures
+\end{verbatim}
+
+The List of Tables shall be generated using:
+
+\begin{verbatim}
+\listoftables
+\end{verbatim}
+
+Students shall not manually create or edit page numbers in the
+Table of Contents, List of Figures, or List of Tables.
+
+The document shall be compiled sufficiently to ensure that all page
+numbers, references, and lists are correctly updated.
+
+\vspace{0.3cm}
+
+% ================================================================
+% VII. FIGURES, DIAGRAMS, AND GRAPHS
+% ================================================================
+
+\noindent
+\textbf{VII.\quad FIGURES, DIAGRAMS, AND GRAPHS}
+
+\vspace{0.15cm}
+
+\begin{itemize}[leftmargin=0.8cm, itemsep=3pt]
+
+    \item Figures shall be clear, legible, and directly relevant to
+    the report content.
+
+    \item Figures shall be inserted using the standard
+    \verb|figure| environment.
+
+    \item Figure captions shall be placed below the figure.
+
+    \item Figures shall be numbered automatically according to the
+    numbering system defined in the template.
+
+    \item Each figure that is referenced in the text shall be assigned
+    a unique label.
+
+\end{itemize}
+
+Example:
+
+\begin{verbatim}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]
+                    {figures/system_model.pdf}
+    \caption{System model}
+    \label{fig:system-model}
+\end{figure}
+\end{verbatim}
+
+Figures shall be referenced in the text using:
+
+\begin{verbatim}
+Figure~\ref{fig:system-model}
+\end{verbatim}
+
+Students shall not manually type figure numbers.
+
+Figures reproduced or adapted from other sources shall include an
+appropriate citation.
+
+Whenever possible, vector graphics or high-resolution images should
+be used. Low-quality screenshots should be avoided.
+
+\vspace{0.3cm}
+
+% ================================================================
+% VIII. TABLES
+% ================================================================
+
+\noindent
+\textbf{VIII.\quad TABLES}
+
+\vspace{0.15cm}
+
+Tables shall be prepared using appropriate \LaTeX{} environments
+such as \verb|table|, \verb|tabular|, \verb|tabularx|, or
+\verb|longtable|.
+
+Table captions shall be placed above the table.
+
+Example:
+
+\begin{verbatim}
+\begin{table}[H]
+    \centering
+    \caption{System parameters}
+    \label{tab:system-parameters}
+
+    \begin{tabular}{ccc}
+        \hline
+        Parameter & Symbol & Value \\
+        \hline
+        Resistance & $R$ & 0.7 $\Omega$ \\
+        Inductance & $L$ & 2.72 mH \\
+        \hline
+    \end{tabular}
+\end{table}
+\end{verbatim}
+
+Tables shall be referenced using:
+
+\begin{verbatim}
+Table~\ref{tab:system-parameters}
+\end{verbatim}
+
+Students shall not manually enter table numbers.
+
+Tables should be created directly in \LaTeX{} rather than inserted
+as screenshots whenever practicable.
+
+\vspace{0.3cm}
+
+% ================================================================
+% IX. EQUATIONS AND MATHEMATICAL EXPRESSIONS
+% ================================================================
+
+\noindent
+\textbf{IX.\quad EQUATIONS AND MATHEMATICAL EXPRESSIONS}
+
+\vspace{0.15cm}
+
+Mathematical expressions shall be typeset directly using \LaTeX{}.
+Images or screenshots of equations shall not be used.
+
+Short mathematical expressions appearing within a sentence shall
+use inline mathematical mode.
+
+Example:
+
+\begin{verbatim}
+$R = 0.7\,\Omega$
+\end{verbatim}
+
+Important equations shall be placed in a numbered equation
+environment.
+
+Example:
+
+\begin{verbatim}
+\begin{equation}
+    J\frac{d\omega}{dt}
+    = T_e - T_L - B\omega
+    \label{eq:mechanical-model}
+\end{equation}
+\end{verbatim}
+
+Equations shall be referenced using:
+
+\begin{verbatim}
+Equation~\eqref{eq:mechanical-model}
+\end{verbatim}
+
+Equation numbers shall not be manually entered.
+
+Mathematical notation shall be consistent throughout the entire
+report.
+
+\vspace{0.3cm}
+
+% ================================================================
+% X. SYMBOLS, UNITS, AND ABBREVIATIONS
+% ================================================================
+
+\noindent
+\textbf{X.\quad SYMBOLS, UNITS, AND ABBREVIATIONS}
+
+\vspace{0.15cm}
+
+\begin{itemize}[leftmargin=0.8cm, itemsep=3pt]
+
+    \item SI units shall be used wherever applicable.
+
+    \item Symbols and units shall be written consistently throughout
+    the report.
+
+    \item The \verb|siunitx| package should be used for physical
+    quantities and units where appropriate.
+
+\end{itemize}
+
+Examples:
+
+\begin{verbatim}
+\SI{220}{\volt}
+\SI{2.72}{\milli\henry}
+\SI{450}{\radian\per\second}
+\end{verbatim}
+
+Symbols and abbreviations frequently used in the report shall be
+included in the List of Symbols and Abbreviations.
+
+Each abbreviation should normally be defined when it first appears
+in the text.
+
+\vspace{0.3cm}
+
+% ================================================================
+% XI. SOURCE CODE
+% ================================================================
+
+\noindent
+\textbf{XI.\quad SOURCE CODE}
+
+\vspace{0.15cm}
+
+Source code that is necessary for explaining an algorithm,
+controller, simulation, or implementation may be included in the
+main report.
+
+The \verb|listings| environment, or another environment defined by
+the official template, shall be used.
+
+Example:
+
+\begin{verbatim}
+\begin{lstlisting}[language=Matlab]
+A = [-R/L 0;
+      0  -R/L];
+
+K = hinfsyn(P,nmeas,ncont);
+\end{lstlisting}
+\end{verbatim}
+
+Long source-code listings that are not essential to the immediate
+discussion should be placed in the appendices.
+
+Source code should not normally be inserted as screenshots.
+
+\vspace{0.3cm}
+
+% ================================================================
+% XII. CROSS-REFERENCING
+% ================================================================
+
+\noindent
+\textbf{XII.\quad CROSS-REFERENCING}
+
+\vspace{0.15cm}
+
+Chapters, sections, figures, tables, equations, and other numbered
+elements shall be cross-referenced using the standard \LaTeX{}
+mechanism.
+
+The following commands shall be used where appropriate:
+
+\begin{verbatim}
+\label{...}
+\ref{...}
+\eqref{...}
+\end{verbatim}
+
+For example:
+
+\begin{verbatim}
+As shown in Figure~\ref{fig:response}, ...
+\end{verbatim}
+
+Students shall not manually type a reference number such as
+``Figure 3.2'' when the number can be generated automatically.
+
+Cross-referencing ensures that all numbers remain correct when
+figures, tables, equations, or sections are added or removed.
+
+\vspace{0.3cm}
+
+% ================================================================
+% XIII. REFERENCES AND CITATIONS
+% ================================================================
+
+\noindent
+\textbf{XIII.\quad REFERENCES AND CITATIONS}
+
+\vspace{0.15cm}
+
+All sources used in preparing the FInal Design shall be properly
+cited.
+
+References shall be managed using the bibliography system provided
+with the official template. Bibliographic information shall normally
+be stored in the file:
+
+\begin{verbatim}
+References.bib
+\end{verbatim}
+
+A reference may be cited in the text using:
+
+\begin{verbatim}
+\cite{reference-key}
+\end{verbatim}
+
+Students shall not manually enter reference numbers such as
+``[1]'', ``[2]'', etc.
+
+Bibliographic entries shall contain sufficient information to
+identify the original source.
+
+Titles of books, journal articles, conference papers, standards,
+and other publications in foreign languages shall be retained in
+their original language and shall not be translated solely for the
+reference list.
+
+All ideas, data, figures, tables, equations, algorithms, or results
+obtained from another source shall be appropriately acknowledged.
+
+\vspace{0.3cm}
+
+% ================================================================
+% XIV. APPENDICES
+% ================================================================
+
+\noindent
+\textbf{XIV.\quad APPENDICES}
+
+\vspace{0.15cm}
+
+Supporting material that is useful but too extensive for the main
+body of the report should be placed in the appendices.
+
+Appendices may include:
+
+\begin{itemize}[leftmargin=0.8cm, itemsep=2pt]
+    \item complete source code;
+    \item detailed calculation sheets;
+    \item large data tables;
+    \item technical drawings;
+    \item additional simulation results;
+    \item equipment specifications;
+    \item supplementary design documents.
+\end{itemize}
+
+Appendices shall be created using the appendix environment defined
+in the official template.
+
+Example:
+
+\begin{verbatim}
+\begin{appendices}
+
+\chapter{MATLAB SOURCE CODE}
+
+...
+
+\chapter{SYSTEM PARAMETERS}
+
+...
+
+\end{appendices}
+\end{verbatim}
+
+Appendix titles and numbering shall not be manually entered.
+
+\vspace{0.3cm}
+
+% ================================================================
+% XV. LATEX PROJECT ORGANIZATION
+% ================================================================
+
+\noindent
+\textbf{XV.\quad \LaTeX{} PROJECT ORGANIZATION}
+
+\vspace{0.15cm}
+
+Students shall use the official \LaTeX{} template provided by the
+Faculty.
+
+The main formatting commands contained in the document preamble
+shall not be modified unless approval is obtained from the
+supervisor.
+
+A recommended project structure is:
+
+\begin{verbatim}
+FinalDesign/
+|
+|-- main.tex
+|-- References.bib
+|
+|-- figures/
+|   |-- figure01.pdf
+|   |-- figure02.png
+|   `-- ...
+|
+|
+`-- appendix/
+    `-- ...
+\end{verbatim}
+
+File and folder names should preferably contain Latin letters,
+numbers, hyphens, or underscores.
+
+Spaces, Vietnamese diacritics, and unnecessary special characters
+in file names should be avoided where possible.
+
+Recommended examples include:
+
+\begin{verbatim}
+motor_model.pdf
+chapter_01.tex
+simulation_result.png
+\end{verbatim}
+
+\vspace{0.3cm}
+
+% ================================================================
+% XVI. DOCUMENT COMPILATION AND FINAL CHECK
+% ================================================================
+
+\noindent
+\textbf{XVI.\quad DOCUMENT COMPILATION AND FINAL CHECK}
+
+\vspace{0.15cm}
+
+Before submission, the complete \LaTeX{} project shall compile
+successfully and produce the final PDF report.
+
+The final document shall not contain unresolved references such as:
+
+\begin{verbatim}
+??
+[?]
+\end{verbatim}
+
+Before generating the final PDF, students shall check:
+
+\begin{itemize}[leftmargin=0.8cm, itemsep=2pt]
+    \item the Table of Contents;
+    \item page numbering;
+    \item chapter and section numbering;
+    \item figure numbering;
+    \item table numbering;
+    \item equation numbering;
+    \item cross-references;
+    \item citations;
+    \item bibliography;
+    \item appendices;
+    \item font display;
+    \item mathematical symbols;
+    \item image quality.
+\end{itemize}
+
+The document may be compiled using TeX Live, MiKTeX, or
+another compatible \LaTeX{} environment. Regardless of the
+compilation environment, the resulting PDF shall conform to the
+official Department template. \textbf{Students are not allowed to use Overleaf 
+or other online \LaTeX{} editors to protect the 
+knowledge and intellectual property of the project.}
+
+\vspace{0.3cm}
+
+% ================================================================
+% XVII. SUBMISSION REQUIREMENTS
+% ================================================================
+
+\noindent
+\textbf{XVII.\quad SUBMISSION REQUIREMENTS}
+
+\vspace{0.15cm}
+
+The printed report shall satisfy the following requirements:
+
+\begin{itemize}[leftmargin=0.8cm, itemsep=2pt]
+    \item A4 paper;
+    \item single-sided printing;
+    \item one bound copy, unless otherwise specified;
+    \item soft cover;
+    \item formatting in accordance with the official template.
+\end{itemize}
+
+The electronic submission should include:
+
+\begin{itemize}[leftmargin=0.8cm, itemsep=2pt]
+    \item the final PDF report;
+    \item the complete \LaTeX{} source files;
+    \item the \verb|References.bib| file;
+    \item all figures and graphics;
+    \item all additional files required to compile the document.
+\end{itemize}
+
+The submitted source project shall be complete and capable of being
+recompiled to produce a PDF corresponding to the submitted report.
+
+\vspace{0.3cm}
+
+% ================================================================
+% XVIII. ELIGIBILITY FOR FInal Design DEFENSE
+% ================================================================
+
+\noindent
+\textbf{XVIII.\quad ELIGIBILITY FOR FINAL DESIGN DEFENSE}
+
+\vspace{0.15cm}
+
+A student shall be eligible to defend the FInal Design when the
+following requirements have been satisfied:
+
+\begin{enumerate}[label=\arabic*., leftmargin=1.2cm, itemsep=2pt]
+
+    \item The FInal Design has been completed within the specified
+    period.
+
+    \item The report satisfies the academic and technical requirements
+    of the assigned project.
+
+    \item The report complies with the official \LaTeX{} template
+    issued by the Faculty.
+
+    \item The complete \LaTeX{} source compiles successfully without
+    errors affecting the document content or presentation.
+
+    \item The final PDF and required source files have been completed
+    and submitted.
+
+    \item All external sources have been appropriately cited and the
+    reference list has been properly generated.
+
+    \item The supervisor has approved the student to proceed to the
+    FInal Design defense.
+
+\end{enumerate}
+
+\vspace{0.4cm}
+
+\noindent
+\textbf{Note:}
+Students are responsible for the academic and technical content of
+the report. The official \LaTeX{} template is responsible for the
+standardized document formatting. Students should therefore focus
+on entering and organizing the content correctly rather than
+manually modifying the predefined formatting parameters. 
+
+\noindent
+\textbf{Note:}
+This section is provided for guidance only and is included in the main
+document using the command \verb|\input{Regulations.tex}|.
+Students shall remove or comment out this command before submitting the
+final report and shall prepare the report content in accordance with the
+requirements specified in this template.
+
+
+} % End fontsize
+
+\clearpage

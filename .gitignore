@@ -1,0 +1,36 @@
+.DS_Store
+
+# LaTeX generated files
+*.acn
+*.acr
+*.alg
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.glg
+*.glo
+*.gls
+*.idx
+*.ilg
+*.ind
+*.ist
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+*.xdv
+
+# Build output (keep the canonical PDF committed for README viewing)
+*.pdf
+!Quyen_DATN.pdf
+build/
+dist/

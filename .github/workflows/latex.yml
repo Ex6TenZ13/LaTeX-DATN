@@ -1,0 +1,61 @@
+name: Build and release LaTeX
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7.0.1
+
+      - name: Compile PDF
+        uses: xu-cheng/latex-action@6549dc21effb2730855a1281407ecfcececc6c1b # 4.1.0
+        with:
+          root_file: Quyen_DATN.tex
+          args: -pdf -interaction=nonstopmode -file-line-error -halt-on-error -outdir=build
+
+      - name: Create preview and source archive
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes poppler-utils
+          mkdir -p dist
+          cp build/Quyen_DATN.pdf dist/Quyen_DATN.pdf
+          pdftoppm -png -f 1 -singlefile -r 144 dist/Quyen_DATN.pdf dist/preview
+          git archive \
+            --format=zip \
+            --prefix="LaTeX-DATN-${GITHUB_REF_NAME}/" \
+            --output=dist/LaTeX-DATN-source.zip \
+            "$GITHUB_SHA"
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: LaTeX-DATN-${{ github.sha }}
+          path: |
+            dist/Quyen_DATN.pdf
+            dist/preview.png
+            dist/LaTeX-DATN-source.zip
+
+      - name: Create GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            dist/Quyen_DATN.pdf \
+            dist/LaTeX-DATN-source.zip \
+            --title "$GITHUB_REF_NAME" \
+            --generate-notes
