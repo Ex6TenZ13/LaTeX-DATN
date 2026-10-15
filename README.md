@@ -6,14 +6,6 @@ Mẫu báo cáo đồ án tốt nghiệp bằng LaTeX.
 
 Bấm vào ảnh để mở PDF trong trình xem của GitHub. Các bản phát hành và tệp nguồn được lưu tại [GitHub Releases](https://github.com/Ex6TenZ13/LaTeX-DATN/releases/latest).
 
-## Biên dịch
-
-Tài liệu chính là `Quyen_DATN.tex`. Dự án dùng `latexmk` với `pdfLaTeX` và BibTeX:
-
-```powershell
-latexmk -pdf -interaction=nonstopmode -file-line-error Quyen_DATN.tex
-```
-
 ## Cài đặt trên Windows
 
 ### 1. MiKTeX
@@ -41,12 +33,3 @@ Tải [SumatraPDF](https://www.sumatrapdfreader.org/download-free-pdf-viewer) đ
 ```text
 "C:\Program Files\TeXstudio\texstudio.exe" "%f" -line %l
 ```
-
-## Phát hành tự động
-
-Mỗi lần đẩy tag dạng `v*`, GitHub Actions sẽ biên dịch PDF, tạo ảnh xem trước trang đầu và tạo GitHub Release với đúng hai tệp:
-
-- `Quyen_DATN.pdf`
-- `LaTeX-DATN-source.zip` — được tạo trực tiếp từ commit của tag bằng `git archive`.
-
-Không tạo tệp `.rar` giả bằng cách đổi tên ZIP. RAR là định dạng có công cụ tạo chính thức theo giấy phép thương mại; nếu cần RAR thật trên CI, hãy dùng runner tự quản lý đã cài WinRAR/RAR và cung cấp giấy phép hợp lệ. ZIP được dùng ở đây để workflow chạy hợp pháp và tái lập trên GitHub-hosted runner.
