@@ -14,13 +14,13 @@ Mẫu báo cáo đồ án tốt nghiệp bằng LaTeX.
 
 [![Xem trang đầu của báo cáo](preview.png)](https://github.com/Ex6TenZ13/LaTeX-DATN/blob/main/Quyen_DATN.pdf)
 
-Bấm vào ảnh để mở PDF trong trình xem của GitHub. Các bản phát hành và tệp nguồn được lưu tại [GitHub Releases](https://github.com/Ex6TenZ13/LaTeX-DATN/releases/latest).
+Bấm vào ảnh để mở PDF trong trình xem của GitHub. Bản phát hành mới nhất chỉ có gói ZIP mã nguồn để tải tại [GitHub Releases](https://github.com/Ex6TenZ13/LaTeX-DATN/releases/latest); PDF được xem riêng qua ảnh xem trước.
 
-ZIP mã nguồn của release không bao gồm `README.md`.
+ZIP không bao gồm `README.md`; gói chỉ gồm `Quyen_DATN.tex`, `References.bib`, `Regulations.tex` và thư mục `figures/`.
 
 ## Tải và sử dụng gói ZIP
 
-1. Tải [gói ZIP mã nguồn của bản phát hành mới nhất](https://github.com/Ex6TenZ13/LaTeX-DATN/releases/latest/download/LaTeX-DATN-source.zip) từ mục **Assets** trong trang Releases.
+1. Tải [gói ZIP của bản phát hành mới nhất](https://github.com/Ex6TenZ13/LaTeX-DATN/releases/latest/download/LaTeX-DATN.zip) từ mục **Assets** trong trang Releases.
 2. Giải nén ZIP vào một thư mục trên máy tính; không mở hoặc biên dịch tệp `.tex` trực tiếp bên trong ZIP. Giữ nguyên cấu trúc thư mục và các tệp đi kèm.
 3. Mở TeXstudio, dùng **File → Open** để đi tới thư mục vừa giải nén và mở `Quyen_DATN.tex`. TeXstudio sẽ hiển thị các tệp cùng thư mục trong **File Explorer**; chọn **Build & View** hoặc nhấn `F5` để biên dịch và xem PDF.
 
@@ -69,13 +69,13 @@ This is a LaTeX template for a graduation thesis report.
 
 ### PDF preview and releases
 
-Click the preview image above to open the PDF in GitHub's viewer. Releases and source files are available on [GitHub Releases](https://github.com/Ex6TenZ13/LaTeX-DATN/releases/latest).
+Click the preview image above to open the PDF in GitHub's viewer. The latest release offers one downloadable ZIP package on [GitHub Releases](https://github.com/Ex6TenZ13/LaTeX-DATN/releases/latest); the PDF is viewed separately through the preview.
 
-The source ZIP package does not include `README.md`.
+The ZIP does not include `README.md`; it contains only `Quyen_DATN.tex`, `References.bib`, `Regulations.tex`, and the `figures/` folder.
 
 ### Download and use the ZIP package
 
-1. Download the [latest source ZIP package](https://github.com/Ex6TenZ13/LaTeX-DATN/releases/latest/download/LaTeX-DATN-source.zip) from the **Assets** section of the Releases page.
+1. Download the [latest ZIP package](https://github.com/Ex6TenZ13/LaTeX-DATN/releases/latest/download/LaTeX-DATN.zip) from the **Assets** section of the Releases page.
 2. Extract the ZIP archive to a folder on your computer. Do not open or compile the `.tex` file directly from inside the archive. Keep the folder structure and accompanying files unchanged.
 3. In TeXstudio, choose **File → Open**, navigate to the extracted folder, and open `Quyen_DATN.tex`. TeXstudio's **File Explorer** shows the other files in the same folder. Select **Build & View** or press `F5` to compile the document and view the PDF.
 
