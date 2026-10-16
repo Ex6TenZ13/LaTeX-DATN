@@ -188,17 +188,20 @@
     \vspace{1.2in}
     {\fontsize{24pt}{22pt}\selectfont\bfseries #5} 
 
-    
-
-
     \vspace{1.5in}
-    {\fontsize{14pt}{18pt}\selectfont\bfseries Major: }  {\fontsize{14pt}{15pt}\selectfont #3}
-    
-  \end{center}
 
-  
-  \begin{center}
-      {\fontsize{14pt}{15pt}\selectfont\bfseries Project Title:} {\fontsize{14pt}{15pt}\selectfont #7}\\ 
+    {\fontsize{14pt}{18pt}\selectfont
+    \begin{tabular}{@{}r@{\hspace{0.25cm}}l@{}}
+
+    \bfseries Major:
+    & #3
+    \\[0.25cm]
+
+    \bfseries Project Title:
+    & #7
+
+    \end{tabular}
+    }
   \end{center}
 
   \vfill
@@ -259,43 +262,30 @@
     {\fontsize{24pt}{17pt}\selectfont
     \bfseries #5}
 
-    % =====================================================
-    % PROJECT TITLE
-    % =====================================================
-
-    \vspace{0.8in}
-
-    {\fontsize{14pt}{22pt}\selectfont\bfseries Project Title:} {\fontsize{14pt}{22pt}\selectfont #4}
-
-    % =====================================================
-    % AUTHORS
-    % =====================================================
-
-    \vspace{0.1in}
+    \vspace{0.9in}
 
     {\fontsize{14pt}{18pt}\selectfont
-        \begin{tabular}{@{}l@{\ }l@{}}
-            \bfseries Author: &
-            \begin{tabular}[t]{@{}l@{}}
-                #3
-            \end{tabular}
-        \end{tabular}
-    }
-    
-    \vspace{0.1in}
-    {\fontsize{14pt}{18pt}\selectfont\bfseries Class: } {\fontsize{14pt}{18pt}\selectfont #9}
+    \begin{tabular}{@{}r@{\hspace{0.25cm}}l@{}}
 
+    \bfseries Project Title:
+    & #4
+    \\[0.25cm]
 
-    % =====================================================
-    % SUPERVISOR
-    % =====================================================
+    \bfseries Author:
+    &
+    \begin{tabular}[t]{@{}l@{}}
+        #3
+    \end{tabular}
+    \\[0.25cm]
 
-    \vspace{0.1in}
+    \bfseries Class:
+    & #9
+    \\[0.25cm]
 
-    {\fontsize{14pt}{18pt}\selectfont
-        \begin{tabular}{@{}l@{\ }l@{}}
-            \bfseries Supervisor: & #7
-        \end{tabular}
+    \bfseries Supervisor:
+    & #7
+
+    \end{tabular}
     }
 
   \end{center}
@@ -321,25 +311,25 @@
 \makeBiaNgoai
   {THAI NGUYEN UNIVERSITY OF TECHNOLOGY}                                   
   {FACULTY OF INTERNATIONAL TRAINING}                   
-  {Major name}                                    
+  {\makebox[5cm][l]{\dotfill}}
   {Project Title}  
   {FINAL DESIGN}                            
   {ENGINEERING AND TECHNOLOGY DEPARTMENT}                    
-  {Title of the project}                                                                     
+  {\makebox[5cm][l]{\dotfill}}
   {Thai Nguyen - \the\year}                              
 \clearpage
 
 \makeBiaTrong
   {THAI NGUYEN UNIVERSITY OF TECHNOLOGY}
   {FACULTY OF INTERNATIONAL TRAINING}
-  {Student's name 1 - Student's ID\\
-   Student's name 2 - Student's ID}
-  {Project Title}
+  {\makebox[5cm][l]{\dotfill}\\
+   \makebox[5cm][l]{\dotfill}}
+  {\makebox[5cm][l]{\dotfill}}
   {FINAL DESIGN}
   {ENGINEERING AND TECHNOLOGY DEPARTMENT}
-  {Supervisor's name}
+  {\makebox[5cm][l]{\dotfill}}
   {Thai Nguyen - \the\year}
-  {}
+  {\makebox[5cm][l]{\dotfill}}
 \clearpage
 
 %========================================================
@@ -425,17 +415,17 @@ DEPARTMENT:
 
     \textit{Student:} &
     \begin{tabular}[t]{@{}l@{}}
-        Student's name 1 - Student's ID\\
-        Student's name 2 - Student's ID
+        \makebox[5cm][l]{\dotfill}\\
+        \makebox[5cm][l]{\dotfill}
     \end{tabular}
     \\[0.55cm]
 
     \textit{Class:} &
-    Class name
+    \makebox[5cm][l]{\dotfill}
     \\[0.55cm]
 
     \textit{Major:} &
-    Major name
+    \makebox[5cm][l]{\dotfill}
     \\[0.55cm]
 
     \textit{Assignment date:} &
