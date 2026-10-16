@@ -14,7 +14,7 @@ Mẫu báo cáo đồ án tốt nghiệp bằng LaTeX.
 
 [![Xem trang đầu của báo cáo](preview.png)](https://github.com/Ex6TenZ13/LaTeX-DATN/blob/main/Quyen_DATN.pdf)
 
-Bấm vào ảnh để mở PDF trong trình xem của GitHub. Bản phát hành mới nhất chỉ có gói ZIP mã nguồn để tải tại [GitHub Releases](https://github.com/Ex6TenZ13/LaTeX-DATN/releases/latest); PDF được xem riêng qua ảnh xem trước.
+Bấm vào ảnh để xem PDF mẫu báo cáo và các quy định về hình thức, cách trình bày báo cáo bằng LaTeX. Bản phát hành mới nhất chỉ có gói ZIP để tải tại [GitHub Releases](https://github.com/Ex6TenZ13/LaTeX-DATN/releases/latest).
 
 ZIP không bao gồm `README.md`; gói chỉ gồm `Quyen_DATN.tex`, `References.bib`, `Regulations.tex` và thư mục `figures/`.
 
@@ -69,7 +69,7 @@ This is a LaTeX template for a graduation thesis report.
 
 ### PDF preview and releases
 
-Click the preview image above to open the PDF in GitHub's viewer. The latest release offers one downloadable ZIP package on [GitHub Releases](https://github.com/Ex6TenZ13/LaTeX-DATN/releases/latest); the PDF is viewed separately through the preview.
+Click the image to view a sample report PDF and the guidelines for report formatting and presentation in LaTeX. The latest release offers one downloadable ZIP package on [GitHub Releases](https://github.com/Ex6TenZ13/LaTeX-DATN/releases/latest).
 
 The ZIP does not include `README.md`; it contains only `Quyen_DATN.tex`, `References.bib`, `Regulations.tex`, and the `figures/` folder.
 
