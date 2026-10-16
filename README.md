@@ -2,6 +2,12 @@
 
 [![LaTeX PDF and release](https://github.com/Ex6TenZ13/LaTeX-DATN/actions/workflows/latex.yml/badge.svg?branch=main)](https://github.com/Ex6TenZ13/LaTeX-DATN/actions/workflows/latex.yml)
 
+> 📣 **Mẫu LaTeX DATN đang trong quá trình chỉnh sửa và hoàn thiện**
+>
+> Nội dung, cấu trúc và định dạng trong các tệp `.tex` có thể thay đổi; PDF và ảnh xem trước sẽ được cập nhật theo. Nếu đang sử dụng mẫu, hãy kiểm tra [bản phát hành mới nhất](https://github.com/Ex6TenZ13/LaTeX-DATN/releases/latest) trước khi bắt đầu hoặc tiếp tục báo cáo.
+>
+> Có ý tưởng hoặc phát hiện lỗi? Hãy gửi góp ý tại [Issues](https://github.com/Ex6TenZ13/LaTeX-DATN/issues). Vui lòng nêu tệp hoặc phần liên quan, đề xuất hoặc vấn đề, và ảnh minh họa nếu phù hợp.
+
 Mẫu báo cáo đồ án tốt nghiệp bằng LaTeX.
 
 [![Xem trang đầu của báo cáo](preview.png)](https://github.com/Ex6TenZ13/LaTeX-DATN/blob/main/Quyen_DATN.pdf)
