@@ -1,5 +1,5 @@
 % =================================================================
-% SPECIFIC REGULATIONS FOR FInal Design REPORT PREPARATION
+% SPECIFIC REGULATIONS FOR Final Design REPORT PREPARATION
 % USING LATEX
 % =================================================================
 
@@ -18,14 +18,25 @@
 \setstretch{1.3}
 \justifying
 
+% Regulation-only heading levels. These are deliberately local and do not
+% change the report's chapter/section counters or the template preamble.
+\newcommand{\RegSection}[2]{%
+    \par\vspace{0.45cm}\noindent
+    {\fontsize{15pt}{19pt}\selectfont\bfseries #1.\quad #2}\par
+    \vspace{0.12cm}}
+\newcommand{\RegSubsection}[1]{%
+    \par\vspace{0.18cm}\noindent
+    {\fontsize{13pt}{17pt}\selectfont\bfseries #1}\par
+    \vspace{0.06cm}}
+\newcommand{\RegExample}{\textbf{Example.}\quad}
+
 % ================================================================
 % I. REPORT STRUCTURE
 % ================================================================
 
-\noindent
-\textbf{I.\quad REPORT STRUCTURE}
+\RegSection{I}{REPORT STRUCTURE}
 
-\vspace{0.15cm}
+\RegSubsection{Required order of the report}
 
 The Final Design report shall be prepared using the official
 \LaTeX{} template provided by the Department. Students shall not modify
@@ -46,7 +57,7 @@ The report shall be arranged in the following order:
     \item List of Figures;
     \item List of Tables;
     \item Abstract;
-    \item Main chapters of the FInal Design;
+    \item Main chapters of the Final Design;
     \item Conclusions and Recommendations;
     \item References;
     \item Appendices (if applicable).
@@ -56,16 +67,30 @@ The preliminary pages shall not be numbered as chapters. The main
 content shall be organized into consecutively numbered chapters,
 beginning with Chapter 1.
 
+\RegSubsection{What belongs in each part}
+
+The outer and inner covers identify the student, project, supervisor,
+program, and academic year. Official assignment and evaluation forms
+shall be completed using the forms supplied by the Department. The
+abstract briefly states the problem, approach, principal results, and
+conclusion; it is not a second introduction. The conclusion should
+answer the stated objectives, while recommendations should identify
+reasonable next steps or limitations.
+
+\RegExample A typical technical report may use the following chapter
+sequence: project background and objectives; theoretical foundation
+and related work; design or methodology; implementation and results;
+discussion; and conclusions and recommendations. Adapt the chapter
+titles and sequence to the assigned project rather than copying this
+outline mechanically.
+
 \vspace{0.3cm}
 
 % ================================================================
-% II. CONTENT OF THE FInal Design
+% II. CONTENT OF THE Final Design
 % ================================================================
 
-\noindent
-\textbf{II.\quad CONTENT OF THE FInal Design}
-
-\vspace{0.15cm}
+\RegSection{II}{CONTENT OF THE FINAL DESIGN}
 
 \begin{itemize}[leftmargin=0.8cm, itemsep=3pt]
 
@@ -101,16 +126,28 @@ beginning with Chapter 1.
 
 \end{itemize}
 
+\RegSubsection{Write for a technical reader}
+
+Introduce a problem before presenting its solution. Define the
+objective, assumptions, method, evidence, and interpretation so a
+reader can follow how the results support the conclusions. Distinguish
+measured or simulated results from estimates, and state important
+limitations. Do not use a figure, table, or equation as a substitute
+for explaining its meaning in the surrounding text.
+
+\RegExample Instead of writing only ``The result is shown below,''
+identify the result and explain its significance: ``\verb|Figure~\ref{fig:response}|
+shows that the settling time decreases after the controller is
+updated; this supports the design objective stated in
+\verb|Section~\ref{sec:objectives}|.''
+
 \vspace{0.3cm}
 
 % ================================================================
 % III. PAGE LAYOUT AND TEXT FORMATTING
 % ================================================================
 
-\noindent
-\textbf{III.\quad PAGE LAYOUT AND TEXT FORMATTING}
-
-\vspace{0.15cm}
+\RegSection{III}{PAGE LAYOUT AND TEXT FORMATTING}
 
 The report shall be formatted on A4 paper and printed on one side
 of each sheet. The page margins shall be:
@@ -136,16 +173,28 @@ official template. Students shall not manually alter margins, font
 sizes, line spacing, heading spacing, or paragraph formatting for
 individual pages.
 
+\RegSubsection{Practical formatting rules}
+
+Use the template's paragraph and heading commands; do not align text
+with repeated spaces or force page breaks merely to make a page look
+full. Keep the supplied A4 paper size, 13 pt body text, 1.3 line
+spacing, Times-family typeface, and margins (left 3.5 cm, right 2.0 cm,
+top and bottom 2.5 cm). These values describe the required output;
+students should not recreate them with local formatting commands.
+Use italic, bold, and quotation marks sparingly and consistently.
+
+\RegExample Put emphasis in the source with a semantic command such as
+\verb|\emph{important term}|, not with manual spacing or a series of
+font-size changes. Let LaTeX wrap paragraphs and place floating
+figures and tables.
+
 \vspace{0.3cm}
 
 % ================================================================
 % IV. CHAPTERS, SECTIONS, AND SUBSECTIONS
 % ================================================================
 
-\noindent
-\textbf{IV.\quad CHAPTERS, SECTIONS, AND SUBSECTIONS}
-
-\vspace{0.15cm}
+\RegSection{IV}{CHAPTERS, SECTIONS, AND SUBSECTIONS}
 
 \begin{itemize}[leftmargin=0.8cm, itemsep=3pt]
 
@@ -177,16 +226,26 @@ individual pages.
 
 \end{itemize}
 
+\RegSubsection{Choose a clear hierarchy}
+
+Use a chapter for a major stage or subject in the report, a section
+for a coherent topic within that chapter, and a subsection for a
+necessary component of that topic. A heading should describe the
+content that follows it. Avoid a heading followed immediately by
+another heading with no explanatory text, and avoid creating a
+subsection when it would contain only one short sentence.
+
+\RegExample The template generates headings such as ``3'', ``3.1'',
+and ``3.1.1'' automatically. Write only the title in the command;
+never type the number yourself.
+
 \vspace{0.3cm}
 
 % ================================================================
 % V. PAGE NUMBERING
 % ================================================================
 
-\noindent
-\textbf{V.\quad PAGE NUMBERING}
-
-\vspace{0.15cm}
+\RegSection{V}{PAGE NUMBERING}
 
 Cover pages and official forms at the beginning of the report shall
 not display page numbers.
@@ -203,10 +262,7 @@ Students shall not manually enter page numbers.
 % VI. TABLE OF CONTENTS AND LISTS
 % ================================================================
 
-\noindent
-\textbf{VI.\quad TABLE OF CONTENTS AND LISTS}
-
-\vspace{0.15cm}
+\RegSection{VI}{TABLE OF CONTENTS AND LISTS}
 
 The Table of Contents shall be generated automatically using:
 
@@ -232,16 +288,25 @@ Table of Contents, List of Figures, or List of Tables.
 The document shall be compiled sufficiently to ensure that all page
 numbers, references, and lists are correctly updated.
 
+\RegSubsection{Keep captions informative}
+
+Every listed figure and table needs a concise caption that makes its
+subject clear. Use the optional short caption when the full caption is
+too long for the List of Figures or List of Tables:
+
+\begin{verbatim}
+\caption[Short list entry]{Full caption with context and details}
+\end{verbatim}
+
+Do not edit generated list files or type page numbers by hand.
+
 \vspace{0.3cm}
 
 % ================================================================
 % VII. FIGURES, DIAGRAMS, AND GRAPHS
 % ================================================================
 
-\noindent
-\textbf{VII.\quad FIGURES, DIAGRAMS, AND GRAPHS}
-
-\vspace{0.15cm}
+\RegSection{VII}{FIGURES, DIAGRAMS, AND GRAPHS}
 
 \begin{itemize}[leftmargin=0.8cm, itemsep=3pt]
 
@@ -263,15 +328,108 @@ numbers, references, and lists are correctly updated.
 
 Example:
 
+\RegExample Rendered output:
+
+\begin{center}
+    \includegraphics[width=0.28\textwidth]{figures/fit.jpg}
+    \par\smallskip
+    \textbf{Example image: Faculty emblem}
+\end{center}
+
+Source code to place an image as a numbered figure:
+
 \begin{verbatim}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]
-                    {figures/system_model.pdf}
-    \caption{System model}
-    \label{fig:system-model}
+    \includegraphics[width=0.28\textwidth]{figures/fit.jpg}
+    \caption{University emblem}
+    \label{fig:university-emblem}
 \end{figure}
 \end{verbatim}
+
+\RegSubsection{Two figures side by side}
+
+When two related figures should be compared, place them in adjacent
+minipages. Use short labels below the images and one caption for the
+combined figure. Keep each image large enough to read and explain the
+comparison in the text.
+
+\RegExample Rendered output:
+
+\begin{center}
+    \begin{minipage}{0.44\textwidth}
+        \centering
+        \includegraphics[width=0.72\linewidth]{figures/fit.jpg}
+        \par\smallskip (a) Faculty emblem
+    \end{minipage}\hfill
+    \begin{minipage}{0.44\textwidth}
+        \centering
+        \includegraphics[width=0.72\linewidth]{figures/tnut.jpg}
+        \par\smallskip (b) University emblem
+    \end{minipage}
+    \par\smallskip
+    \textbf{Example pair: two related images aligned in one figure}
+\end{center}
+
+Source code for the rendered pair:
+
+\begin{verbatim}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/fit.jpg}
+        \par\smallskip (a) University emblem
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/tnut.jpg}
+        \par\smallskip (b) Faculty emblem
+    \end{minipage}
+    \caption{Comparison of two related institutional emblems}
+    \label{fig:emblem-comparison}
+\end{figure}
+\end{verbatim}
+
+\RegSubsection{Wide or full-page figures}
+
+For a figure that needs nearly the full text area, use a width no
+greater than \verb|\textwidth|. If a detailed drawing cannot be read
+at that size, place it on a dedicated page or in an appendix rather
+than shrinking it until labels are illegible. Follow the template's
+orientation and page-layout rules; do not rotate or change page
+dimensions without approval.
+
+\RegExample Full-page visual example:
+
+\clearpage
+\begin{center}
+    \includegraphics[width=0.82\textwidth,height=0.68\textheight,
+                     keepaspectratio]{figures/fit.jpg}
+    \par\smallskip
+    \textbf{Example: a figure given a dedicated page}
+\end{center}
+\clearpage
+
+Source code for a wide figure placed on a float page:
+
+\begin{verbatim}
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=\textwidth,height=0.68\textheight,
+                     keepaspectratio]{figures/fit.jpg}
+    \caption{University emblem shown as a full-page figure example}
+    \label{fig:full-system}
+\end{figure}
+\end{verbatim}
+
+\RegSubsection{Image quality and attribution}
+
+Prefer vector output (PDF) for diagrams and plots. For photographs,
+use a sufficiently high-resolution raster image (such as PNG or JPEG).
+Check that axes, units, legends, and labels remain readable in the
+compiled PDF. Cite the source in the caption or nearby text when a
+figure is reproduced or adapted.
 
 Figures shall be referenced in the text using:
 
@@ -293,10 +451,7 @@ be used. Low-quality screenshots should be avoided.
 % VIII. TABLES
 % ================================================================
 
-\noindent
-\textbf{VIII.\quad TABLES}
-
-\vspace{0.15cm}
+\RegSection{VIII}{TABLES}
 
 Tables shall be prepared using appropriate \LaTeX{} environments
 such as \verb|table|, \verb|tabular|, \verb|tabularx|, or
@@ -305,6 +460,22 @@ such as \verb|table|, \verb|tabular|, \verb|tabularx|, or
 Table captions shall be placed above the table.
 
 Example:
+
+\RegExample Rendered output:
+
+\begin{center}
+\textbf{System parameters}\par\smallskip
+\begin{tabular}{|l|c|c|}
+    \hline
+    Parameter & Symbol & Value \\
+    \hline
+    Resistance & $R$ & $0.7\,\Omega$ \\
+    Inductance & $L$ & $2.72\,\mathrm{mH}$ \\
+    \hline
+\end{tabular}
+\end{center}
+
+Source code that creates the table above:
 
 \begin{verbatim}
 \begin{table}[H]
@@ -323,6 +494,155 @@ Example:
 \end{table}
 \end{verbatim}
 
+\RegSubsection{Short tables}
+
+Use a normal \verb|table| float for a table that fits on one page.
+Keep column headings concise, use consistent units, and avoid
+unnecessary vertical rules. The template may provide packages such as
+\verb|booktabs| or \verb|tabularx|; use only commands supported by its
+preamble.
+
+\RegSubsection{Long tables spanning pages}
+
+Use \verb|longtable| when a table genuinely spans multiple pages. It
+continues across pages and is not placed inside a \verb|table| float.
+Repeat the heading row so readers can identify columns on each page.
+
+\RegExample Rendered output (the repeated heading appears when the
+table continues onto the next page):
+
+\begin{longtable}{|c|l|r|}
+\caption*{Example: measurements across multiple tests}\\
+\hline
+\textbf{Test} & \textbf{Condition} & \textbf{Value} \\
+\hline
+\endfirsthead
+\multicolumn{3}{l}{\textit{Example: measurements (continued)}}\\
+\hline
+\textbf{Test} & \textbf{Condition} & \textbf{Value} \\
+\hline
+\endhead
+01 & Nominal load & 12.4 \\\hline
+02 & Nominal load & 12.7 \\\hline
+03 & Low input & 11.9 \\\hline
+04 & Low input & 12.0 \\\hline
+05 & High input & 13.1 \\\hline
+06 & High input & 13.0 \\\hline
+07 & Nominal load & 12.5 \\\hline
+08 & Nominal load & 12.6 \\\hline
+09 & Low input & 11.8 \\\hline
+10 & Low input & 11.9 \\\hline
+11 & High input & 13.2 \\\hline
+12 & High input & 13.1 \\\hline
+13 & Nominal load & 12.4 \\\hline
+14 & Nominal load & 12.5 \\\hline
+15 & Low input & 11.7 \\\hline
+16 & Low input & 11.9 \\\hline
+17 & High input & 13.0 \\\hline
+18 & High input & 13.2 \\\hline
+19 & Nominal load & 12.6 \\\hline
+20 & Nominal load & 12.5 \\\hline
+21 & Low input & 11.8 \\\hline
+22 & Low input & 11.9 \\\hline
+23 & High input & 13.1 \\\hline
+24 & High input & 13.2 \\\hline
+25 & Nominal load & 12.4 \\\hline
+26 & Nominal load & 12.6 \\\hline
+27 & Low input & 11.8 \\\hline
+28 & Low input & 11.9 \\\hline
+29 & High input & 13.1 \\\hline
+30 & High input & 13.0 \\\hline
+31 & Nominal load & 12.5 \\\hline
+32 & Nominal load & 12.7 \\\hline
+33 & Low input & 11.7 \\\hline
+34 & Low input & 12.0 \\\hline
+35 & High input & 13.2 \\\hline
+36 & High input & 13.1 \\\hline
+37 & Nominal load & 12.4 \\\hline
+38 & Nominal load & 12.5 \\\hline
+39 & Low input & 11.8 \\\hline
+40 & Low input & 11.9 \\\hline
+41 & High input & 13.0 \\\hline
+42 & High input & 13.2 \\\hline
+43 & Nominal load & 12.5 \\\hline
+44 & Nominal load & 12.6 \\\hline
+45 & Low input & 11.9 \\\hline
+46 & Low input & 11.8 \\\hline
+47 & High input & 13.1 \\\hline
+48 & High input & 13.2 \\\hline
+\end{longtable}
+
+Source code for a multi-page table:
+
+\begin{verbatim}
+\begin{longtable}{|c|l|r|}
+\caption{Measurements across multiple tests}\label{tab:measurements}\\
+\hline
+\textbf{Test} & \textbf{Condition} & \textbf{Value} \\
+\hline
+\endfirsthead
+\multicolumn{3}{l}{\textit{Measurements (continued)}}\\
+\hline
+\textbf{Test} & \textbf{Condition} & \textbf{Value} \\
+\hline
+\endhead
+01 & Nominal load & 12.4 \\
+02 & Nominal load & 12.7 \\
+% Continue the remaining rows in the same format. The headings
+% between \endfirsthead and \endhead repeat on subsequent pages.
+\end{longtable}
+\end{verbatim}
+
+\RegSubsection{Wide tables}
+
+First shorten headings, wrap text, or use a template-supported
+column type. If the table still exceeds the text width, use the
+provided \verb|adjustbox| package to constrain it to the page's text
+area; do not reduce it below a readable size. A landscape page or
+appendix should be considered for exceptionally wide data.
+
+\RegExample Rendered output (the table is constrained to the text
+width so it stays within the page margins):
+
+\begin{center}
+\textbf{Comparison of system configurations}\par\smallskip
+\begin{adjustbox}{max width=\textwidth}
+    \begin{tabular}{|l|r|r|r|r|r|}
+        \hline
+        Config. & Vin (V) & I (A) & n (rpm) & T (N m) & eta (\%) \\
+        \hline
+        Baseline & 220 & 1.8 & 1450 & 2.4 & 82 \\
+        Revised controller & 220 & 1.6 & 1500 & 2.6 & 87 \\
+        Reduced voltage & 200 & 1.7 & 1370 & 2.3 & 84 \\
+        \hline
+    \end{tabular}
+\end{adjustbox}
+\end{center}
+
+Source code for the wide table:
+
+\begin{verbatim}
+\begin{table}[H]
+    \centering
+    \caption{Wide comparison of system configurations}
+    \label{tab:wide-comparison}
+    \begin{adjustbox}{max width=\textwidth}
+        \begin{tabular}{lrrrrr}
+            \hline
+            Config. & Vin (V) & I (A) & n (rpm) & T (N m) & eta (\%) \\
+            \hline
+            Baseline & 220 & 1.8 & 1450 & 2.4 & 82 \\
+            Revised controller & 220 & 1.6 & 1500 & 2.6 & 87 \\
+            Reduced voltage & 200 & 1.7 & 1370 & 2.3 & 84 \\
+            \hline
+        \end{tabular}
+    \end{adjustbox}
+\end{table}
+\end{verbatim}
+
+Never use a screenshot of a table when the data can be typeset. If a
+table is adapted from another source, cite that source.
+
 Tables shall be referenced using:
 
 \begin{verbatim}
@@ -340,10 +660,7 @@ as screenshots whenever practicable.
 % IX. EQUATIONS AND MATHEMATICAL EXPRESSIONS
 % ================================================================
 
-\noindent
-\textbf{IX.\quad EQUATIONS AND MATHEMATICAL EXPRESSIONS}
-
-\vspace{0.15cm}
+\RegSection{IX}{EQUATIONS AND MATHEMATICAL EXPRESSIONS}
 
 Mathematical expressions shall be typeset directly using \LaTeX{}.
 Images or screenshots of equations shall not be used.
@@ -351,7 +668,10 @@ Images or screenshots of equations shall not be used.
 Short mathematical expressions appearing within a sentence shall
 use inline mathematical mode.
 
-Example:
+\RegExample Rendered inline expression: the resistance is
+$R = 0.7\,\Omega$.
+
+Source code:
 
 \begin{verbatim}
 $R = 0.7\,\Omega$
@@ -360,7 +680,14 @@ $R = 0.7\,\Omega$
 Important equations shall be placed in a numbered equation
 environment.
 
-Example:
+\RegExample Rendered display equation:
+
+\begin{equation*}
+    J\frac{d\omega}{dt}=T_e-T_L-B\omega
+\end{equation*}
+
+The display above is unnumbered for illustration. In the report,
+use the numbered form below when the equation will be referenced:
 
 \begin{verbatim}
 \begin{equation}
@@ -381,16 +708,25 @@ Equation numbers shall not be manually entered.
 Mathematical notation shall be consistent throughout the entire
 report.
 
+\RegSubsection{Explain equations and define variables}
+
+Introduce an equation in the text, define each new symbol at first
+use, and state assumptions and units where relevant. Use punctuation
+as part of the sentence containing the equation. Do not insert an
+equation image or manually type its number.
+
+\RegExample After the equation, explain what the variables represent
+and how the expression is used in the analysis. A numbered equation
+is appropriate when it is referenced later; a short expression used
+once can remain inline.
+
 \vspace{0.3cm}
 
 % ================================================================
 % X. SYMBOLS, UNITS, AND ABBREVIATIONS
 % ================================================================
 
-\noindent
-\textbf{X.\quad SYMBOLS, UNITS, AND ABBREVIATIONS}
-
-\vspace{0.15cm}
+\RegSection{X}{SYMBOLS, UNITS, AND ABBREVIATIONS}
 
 \begin{itemize}[leftmargin=0.8cm, itemsep=3pt]
 
@@ -404,12 +740,60 @@ report.
 
 \end{itemize}
 
-Examples:
+\RegExample Rendered quantities and their units:
+
+\begin{center}
+    Supply voltage: \SI{220}{\volt}\par
+    Inductance: \SI{2.72}{\milli\henry}\par
+    Angular speed: \SI{450}{\radian\per\second}
+\end{center}
+
+Source code for the quantities above:
 
 \begin{verbatim}
 \SI{220}{\volt}
 \SI{2.72}{\milli\henry}
 \SI{450}{\radian\per\second}
+\end{verbatim}
+
+Rendered symbol-list example:
+
+\begin{center}
+\begin{tabular}{|c|l|c|}
+    \hline
+    Symbol & Meaning & Unit \\
+    \hline
+    $R$ & Resistance & $\si{\ohm}$ \\
+    $L$ & Inductance & $\si{\henry}$ \\
+    $\omega$ & Angular speed & $\si{\radian\per\second}$ \\
+    \hline
+\end{tabular}
+\end{center}
+
+Source code for the symbol list:
+
+\begin{verbatim}
+\begin{tabular}{|c|l|c|}
+    \hline
+    Symbol & Meaning & Unit \\
+    \hline
+    $R$ & Resistance & $\si{\ohm}$ \\
+    $L$ & Inductance & $\si{\henry}$ \\
+    $\omega$ & Angular speed & $\si{\radian\per\second}$ \\
+    \hline
+\end{tabular}
+\end{verbatim}
+
+Rendered abbreviation example: ``The proportional-integral (PI)
+controller is evaluated first. The PI controller is then compared
+with the reference design.'' Define an abbreviation at first use,
+then use it consistently.
+
+Source text:
+
+\begin{verbatim}
+The proportional-integral (PI) controller is evaluated first.
+The PI controller is then compared with the reference design.
 \end{verbatim}
 
 Symbols and abbreviations frequently used in the report shall be
@@ -418,16 +802,31 @@ included in the List of Symbols and Abbreviations.
 Each abbreviation should normally be defined when it first appears
 in the text.
 
+\RegSubsection{Use symbols consistently}
+
+Use italic Latin or Greek symbols for variable quantities and upright
+SI unit symbols. Leave a proper space between a number and its unit;
+do not pluralize or add a full stop to unit symbols. Keep a symbol's
+meaning consistent across chapters and include frequently used
+symbols in the corresponding list.
+
+\RegExample The \verb|siunitx| commands keep number and unit spacing
+consistent. For example:
+
+\begin{verbatim}
+\SI{5}{\kilo\ohm}
+\end{verbatim}
+
+This is preferable to manually typing inconsistent spacing or
+spelling unit symbols as words.
+
 \vspace{0.3cm}
 
 % ================================================================
 % XI. SOURCE CODE
 % ================================================================
 
-\noindent
-\textbf{XI.\quad SOURCE CODE}
-
-\vspace{0.15cm}
+\RegSection{XI}{SOURCE CODE}
 
 Source code that is necessary for explaining an algorithm,
 controller, simulation, or implementation may be included in the
@@ -458,10 +857,7 @@ Source code should not normally be inserted as screenshots.
 % XII. CROSS-REFERENCING
 % ================================================================
 
-\noindent
-\textbf{XII.\quad CROSS-REFERENCING}
-
-\vspace{0.15cm}
+\RegSection{XII}{CROSS-REFERENCING}
 
 Chapters, sections, figures, tables, equations, and other numbered
 elements shall be cross-referenced using the standard \LaTeX{}
@@ -478,7 +874,7 @@ The following commands shall be used where appropriate:
 For example:
 
 \begin{verbatim}
-As shown in Figure~\ref{fig:response}, ...
+As shown in \verb|Figure~\ref{fig:response}|, ...
 \end{verbatim}
 
 Students shall not manually type a reference number such as
@@ -487,18 +883,43 @@ Students shall not manually type a reference number such as
 Cross-referencing ensures that all numbers remain correct when
 figures, tables, equations, or sections are added or removed.
 
+\RegSubsection{What cross-references look like}
+
+After compilation, a sentence with cross-references may appear as
+follows:
+
+\begin{quote}
+Figure 2.3 shows the measured response. The test conditions are
+listed in Table 2.1, and the model is defined by Equation (2.4).
+\end{quote}
+
+The numbers above are illustrative. In the report, labels and
+cross-reference commands generate the actual numbers and update them
+when content is moved or added.
+
+Source code for the sentence above:
+
+\begin{verbatim}
+Figure~\ref{fig:response} shows the measured response. The test
+conditions are listed in Table~\ref{tab:conditions}, and the model
+is defined by Equation~\eqref{eq:model}.
+\end{verbatim}
+
+Place each \verb|\label| after the command that creates its number,
+usually immediately after \verb|\caption| for figures and tables.
+Use descriptive, unique prefixes such as \verb|ch:|, \verb|sec:|,
+\verb|fig:|, \verb|tab:|, and \verb|eq:| to make labels easy to
+maintain. Compile again when LaTeX reports that references changed.
+
 \vspace{0.3cm}
 
 % ================================================================
 % XIII. REFERENCES AND CITATIONS
 % ================================================================
 
-\noindent
-\textbf{XIII.\quad REFERENCES AND CITATIONS}
+\RegSection{XIII}{REFERENCES AND CITATIONS}
 
-\vspace{0.15cm}
-
-All sources used in preparing the FInal Design shall be properly
+All sources used in preparing the Final Design shall be properly
 cited.
 
 References shall be managed using the bibliography system provided
@@ -521,6 +942,38 @@ Students shall not manually enter reference numbers such as
 Bibliographic entries shall contain sufficient information to
 identify the original source.
 
+\RegSubsection{What a citation looks like in the text}
+
+The exact punctuation depends on the bibliography style. In a
+numeric style, a citation may appear as follows:
+
+\begin{quote}
+The proposed method follows an established design approach [1].
+\end{quote}
+
+The bracketed number above is a visual example of the rendered result;
+do not type it manually. Let the citation command and bibliography
+style generate the number:
+
+\begin{verbatim}
+The proposed method follows an established design approach
+\cite{author2024example}.
+\end{verbatim}
+
+\RegSubsection{What a reference-list entry looks like}
+
+In a numeric bibliography style, an article entry may render like
+this:
+
+\begin{quote}
+[1] A. Author and B. Writer, ``Title of the Research Article,''
+\textit{Journal Name}, vol. 12, no. 3, pp. 100--110, 2024.
+\end{quote}
+
+This is a visual example; the selected bibliography style controls
+punctuation, ordering, and formatting. Store the source details in
+\verb|References.bib| and let BibTeX generate the final reference list.
+
 Titles of books, journal articles, conference papers, standards,
 and other publications in foreign languages shall be retained in
 their original language and shall not be translated solely for the
@@ -529,16 +982,39 @@ reference list.
 All ideas, data, figures, tables, equations, algorithms, or results
 obtained from another source shall be appropriately acknowledged.
 
+\RegSubsection{Maintain the bibliography database}
+
+Use a stable citation key and provide enough metadata for a reader to
+locate the source. A BibTeX entry can be organized as follows; adapt
+the entry type and fields to the actual publication and to the
+bibliography style supplied by the template.
+
+\begin{verbatim}
+@article{author2024example,
+  author  = {Author, First and Writer, Second},
+  title   = {Title of the Research Article},
+  journal = {Journal Name},
+  year    = {2024},
+  volume  = {12},
+  number  = {3},
+  pages   = {100--110},
+  doi     = {10.xxxx/example}
+}
+\end{verbatim}
+
+Use the key in the text, for example \verb|\cite{author2024example}|.
+Verify that every citation has a matching bibliography entry and that
+every listed item is actually cited where required by the chosen
+bibliography style. Follow the department's citation requirements if
+they specify a different style.
+
 \vspace{0.3cm}
 
 % ================================================================
 % XIV. APPENDICES
 % ================================================================
 
-\noindent
-\textbf{XIV.\quad APPENDICES}
-
-\vspace{0.15cm}
+\RegSection{XIV}{APPENDICES}
 
 Supporting material that is useful but too extensive for the main
 body of the report should be placed in the appendices.
@@ -574,6 +1050,53 @@ Example:
 \end{appendices}
 \end{verbatim}
 
+\RegSubsection{Verbatim: preserve text exactly}
+
+The \verb|verbatim| environment prints its contents literally. It is
+useful for short terminal output, configuration text, or source
+fragments where LaTeX commands should not be interpreted.
+
+Rendered output:
+
+\begin{verbatim}
+controller: enabled
+sampling time: 0.01 s
+status: verified
+\end{verbatim}
+
+Source structure: \verb|\begin{verbatim}|, the literal lines, then
+\verb|\end{verbatim}|. Avoid placing long code listings in this
+environment when syntax highlighting or line wrapping is needed.
+
+\RegSubsection{Listings: display source code with formatting}
+
+Use \verb|lstlisting| for program code. The template configures its
+font, line numbers, frame, and line breaking. Choose a language
+recognized by the template or use the language definition provided
+for the project.
+
+Rendered MATLAB listing:
+
+\begin{lstlisting}[language=Matlab]
+gain = 2.5;
+output = gain * input;
+fprintf('Output: %.2f\n', output);
+\end{lstlisting}
+
+Source code that produces the listing:
+
+\begin{verbatim}
+\begin{lstlisting}[language=Matlab]
+gain = 2.5;
+output = gain * input;
+fprintf('Output: %.2f\n', output);
+\end{lstlisting}
+\end{verbatim}
+
+For extensive code, include the listing in an appendix or a separate
+source file as supported by the template. Do not use a screenshot of
+code when selectable, searchable text can be provided.
+
 Appendix titles and numbering shall not be manually entered.
 
 \vspace{0.3cm}
@@ -582,10 +1105,7 @@ Appendix titles and numbering shall not be manually entered.
 % XV. LATEX PROJECT ORGANIZATION
 % ================================================================
 
-\noindent
-\textbf{XV.\quad \LaTeX{} PROJECT ORGANIZATION}
-
-\vspace{0.15cm}
+\RegSection{XV}{\LaTeX{} PROJECT ORGANIZATION}
 
 Students shall use the official \LaTeX{} template provided by the
 Faculty.
@@ -607,6 +1127,10 @@ FinalDesign/
 |   |-- figure02.png
 |   `-- ...
 |
+|-- chapters/
+|   |-- chapter1.tex
+|   |-- chapter2.tex
+|   `-- ...
 |
 `-- appendix/
     `-- ...
@@ -626,16 +1150,17 @@ chapter_01.tex
 simulation_result.png
 \end{verbatim}
 
+Keep every referenced image and included chapter file inside the
+submitted project. Check filename capitalization: some systems treat
+\verb|Figure01.png| and \verb|figure01.png| as different files.
+
 \vspace{0.3cm}
 
 % ================================================================
 % XVI. DOCUMENT COMPILATION AND FINAL CHECK
 % ================================================================
 
-\noindent
-\textbf{XVI.\quad DOCUMENT COMPILATION AND FINAL CHECK}
-
-\vspace{0.15cm}
+\RegSection{XVI}{DOCUMENT COMPILATION AND FINAL CHECK}
 
 Before submission, the complete \LaTeX{} project shall compile
 successfully and produce the final PDF report.
@@ -668,9 +1193,9 @@ Before generating the final PDF, students shall check:
 The document may be compiled using TeX Live, MiKTeX, or
 another compatible \LaTeX{} environment. Regardless of the
 compilation environment, the resulting PDF shall conform to the
-official Department template. \textbf{Students are not allowed to use Overleaf 
+official Department template. Students are not allowed to use Overleaf
 or other online \LaTeX{} editors to protect the 
-knowledge and intellectual property of the project.}
+knowledge and intellectual property of the project.
 
 \vspace{0.3cm}
 
@@ -678,10 +1203,7 @@ knowledge and intellectual property of the project.}
 % XVII. SUBMISSION REQUIREMENTS
 % ================================================================
 
-\noindent
-\textbf{XVII.\quad SUBMISSION REQUIREMENTS}
-
-\vspace{0.15cm}
+\RegSection{XVII}{SUBMISSION REQUIREMENTS}
 
 The printed report shall satisfy the following requirements:
 
@@ -709,20 +1231,17 @@ recompiled to produce a PDF corresponding to the submitted report.
 \vspace{0.3cm}
 
 % ================================================================
-% XVIII. ELIGIBILITY FOR FInal Design DEFENSE
+% XVIII. ELIGIBILITY FOR Final Design DEFENSE
 % ================================================================
 
-\noindent
-\textbf{XVIII.\quad ELIGIBILITY FOR FINAL DESIGN DEFENSE}
+\RegSection{XVIII}{ELIGIBILITY FOR FINAL DESIGN DEFENSE}
 
-\vspace{0.15cm}
-
-A student shall be eligible to defend the FInal Design when the
+A student shall be eligible to defend the Final Design when the
 following requirements have been satisfied:
 
 \begin{enumerate}[label=\arabic*., leftmargin=1.2cm, itemsep=2pt]
 
-    \item The FInal Design has been completed within the specified
+    \item The Final Design has been completed within the specified
     period.
 
     \item The report satisfies the academic and technical requirements
@@ -741,7 +1260,7 @@ following requirements have been satisfied:
     reference list has been properly generated.
 
     \item The supervisor has approved the student to proceed to the
-    FInal Design defense.
+    Final Design defense.
 
 \end{enumerate}
 
